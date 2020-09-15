@@ -20,6 +20,16 @@ public class PersonServiceImpl implements PersonService {
         return personInfoMapper.getPoliceList();
     }
 
+    @Override
+    public void updatePersonInfo() {
+
+    }
+
+    @Override
+    public void deletePersonInfo() {
+
+    }
+
 
     @Override
     public void addPerson() {

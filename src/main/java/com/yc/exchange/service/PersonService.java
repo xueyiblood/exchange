@@ -12,4 +12,8 @@ public interface PersonService {
     void addPerson();
 
     List<PersonInfo> getPoliceList(String name ,  String code);
+
+    void updatePersonInfo();
+
+    void deletePersonInfo();
 }

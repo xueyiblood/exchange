@@ -37,17 +37,17 @@ public class PersonController extends BaseController {
     @PostMapping("updatePersonInfo")
     public AjaxResult deletePoliceList()
     {
-        personService.addPerson();
+        personService.updatePersonInfo();
 
-        return AjaxResult.success("添加成功");
+        return AjaxResult.success("更新成功");
     }
 
     @PostMapping("deletePersonInfo")
     public AjaxResult deletePersonInfo()
     {
-        personService.addPerson();
+        personService.deletePersonInfo();
 
-        return AjaxResult.success("添加成功");
+        return AjaxResult.success("删除成功");
     }
 
 }
