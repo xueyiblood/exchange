@@ -1,6 +1,7 @@
 package com.yc.exchange.service;
 
 import com.yc.exchange.vo.PersonInfo;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -10,5 +11,5 @@ import java.util.List;
 public interface PersonService {
     void addPerson();
 
-    List<PersonInfo> getPoliceList();
+    List<PersonInfo> getPoliceList(String name ,  String code);
 }

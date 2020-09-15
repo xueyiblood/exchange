@@ -5,8 +5,7 @@ import com.yc.exchange.vo.AjaxResult;
 import com.yc.exchange.vo.PersonInfo;
 import com.yc.exchange.vo.TableDataInfo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,10 +18,10 @@ public class PersonController extends BaseController {
     @Autowired
     private PersonService personService;
 
-    @PostMapping("getPoliceList")
-    public TableDataInfo getPoliceList()
+    @GetMapping("getPoliceList")
+    public TableDataInfo getPoliceList(@RequestParam String name , @RequestParam String code)
     {
-        List<PersonInfo> persons = personService.getPoliceList();
+        List<PersonInfo> persons = personService.getPoliceList(name, code);
 
         return getDataTable(persons);
     }
